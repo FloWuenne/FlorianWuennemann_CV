@@ -2,8 +2,8 @@
 headcolor: 00785c
 name: Florian
 surname: W&uuml;nnemann
-position: "Postdoctoral fellow at the Lettre lab"
-address: "Montreal Heart Institute"
+position: "Postdoctoc at the Lettre lab"
+address: "5000 Rue Bélanger, Montréal, QC H1T 1C8"
 # phone: +1 514 516 6667
 www: florianwuennemann.com
 email: "flowuenne@gmail.com"
@@ -11,82 +11,81 @@ twitter: flowuenne
 github: flowuenne
 #linkedin: florian-w&uuml;nnemann-322357189
 date: "`r format(Sys.time(), '%B %Y')`"
-aboutme: "**Research and scientific interests**:	Human genetics, Single cell OMICS, Heart development, Bioinformatics, Interactive data visualizations"
-docname: 
-output: vitae::awesomecv
+aboutme: "**Research and scientific interests**:	Human genetics, Single cell OMICS, Heart development, Bioinformatics, Open source software"
+docname: RÉSUMÉ
+output: 
+  vitae::awesomecv:
+    keep_tex: false
+always_allow_html: yes
+header-includes:
+  \usepackage{float}
+  \usepackage{multicol}
+  \usepackage{colortbl}
+  \arrayrulecolor{white}
+  \usepackage{hhline}
+  \definecolor{light-gray}{gray}{0.95}
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 library(tibble)
+library(glue)
+library(fontawesome)
 ```
 
-# Experience
+\faIcon{plane} Research experience
+============================
 
-```{r}
+```{r, research_experience}
+readr::read_csv("experience.csv") %>% 
+  detailed_entries(what = position, 
+                   when = glue::glue("{start} - {end}"),
+                   with = institution,
+                   where = where,
+                   description)
+```
+
+
+\faIcon{university} Education
+============================
+
+```{r, education}
 library(tibble)
-tribble(
-  ~ Title, ~ Year, ~ Institution, ~ Where, ~ Details,
-  "Postdoc", "Aug. 2018- ongoing", "Montreal Heart Institute", "Montreal, Canada", "Single-cell technologies, Polygenic risk scores, Large-scale CRISPR applications, Atherosclerosis") %>% 
-  detailed_entries(Title, Year, Institution, Where, Details)
+readr::read_csv("education.csv") %>%
+  detailed_entries(what = degree,
+                   when = glue("{start} - {end}"),
+                   with = institution,
+                   where = where,
+                   details)
 ```
 
+\faIcon{dollar-sign} Funding History
+============================
 
-# Education
-
-```{r}
-library(tibble)
-tribble(
-  ~ degree, ~ Year, ~ Institution, ~ Where, ~ Details,
-  "Ph.D. (Dr.rer.nat)", "Apr. 2014 - Apr.2018", "University of Münster / CHU Sainte Justine Research Center", "Münster, Germany / Montreal, Canada", "The role of genetic factors in pathogenesis and progression of cardiac malformations",
-  "MSc - Life sciences", "Oct. 2011 - Feb. 2014", "University of  Münster", "Münster, Germany", "Functional and genetic characterization of a novel arrhythmic syndrome",
-  "BSc - Physiology", "Oct. 2008 - Sep. 2011", "University of  Münster", "Münster, Germany",  "Impact of nutrient limitation in insects: Comparative genomics of the pea aphid and the human body louse"
-) %>%
-  
-  
-  detailed_entries(degree, year, institution, where, details)
-```
-
-# Research Experience
-
-```{r}
-library(tibble)
-tribble(
-  ~ Position, ~ Year, ~ Institution, ~ Where, ~ Group,
-  "Student Research assistant", "Jan. 2012 - Jul.2012", "IEB, University of  Münster", "Münster, Germany", "Acquisti group",
-  "Student assistant", "Sep. 2011 - Dec. 2011", "IEB, University of  Münster", "Münster, Germany", "Acquisti group",
-  "Student assistant", "Mar.2011 - May 2011", "IEB, University of  Münster", "Münster, Germany","Bornberg-Bauer group"
-) %>% 
-  detailed_entries(Position, Year, Institution,Where, Group)
-
-
-readr::read_csv("presentations.csv") %>% 
-  subset(type == "Oral") %>%
-  detailed_entries(with = conference, 
-                   when = glue::glue("{start} - {end}"), 
-                   what = title,
-                   where = location)
-```
-
-# Funding
-
-```{r}
+```{r, funding}
 readr::read_csv("scholarships.csv") %>% 
-   brief_entries(what = scholarship, 
+   detailed_entries(what = scholarship, 
                  when = glue::glue("{start} - {end}"))
 ```
 
 
-# Achievements and Awards
+\faIcon{award} Achievements and Awards
+============================
 
-```{r}
-readr::read_csv("awards.csv") %>% 
-   brief_entries(what = award, when = year)
+```{r, awards}
+tribble(~time, ~award, ~place,
+        "2019/06","Best oral presentation award, 22nd Montreal Heart Institute research day","Montreal,Canada",
+        "2017/05","Best oral presentation award, 32nd student congress at the CHU Sainte-Justine","Montreal, Canada",
+        "2016/05","Markwald award for best oral presentation, Weinstein Cardiovascular Development and Regeneration Conference 2016","Durham, USA") %>%
+   brief_entries(what = award,
+                 when = time, 
+                 with = place)
 ```
 
 
-# Presentations
+\faIcon{file-powerpoint} Presentations
+============================
 
 ```{r presentations}
 readr::read_csv("presentations.csv") %>% 
@@ -97,7 +96,8 @@ readr::read_csv("presentations.csv") %>%
                    where = location)
 ```
 
-# Poster presentations
+\faIcon{chalkboard-teacher} Poster presentations
+============================
 
 ```{r}
 readr::read_csv("presentations.csv") %>% 
@@ -107,36 +107,28 @@ readr::read_csv("presentations.csv") %>%
                    what = title, where = location)
 ```
 
-# Publications
+\faIcon{scroll} Publications
+============================
 
 ```{r}
-# library(dplyr)
-# 
-# bibliography_entries("references.bib") %>%
-#   arrange(desc(issued))
+library(dplyr)
+
+bibliography_entries("references.bib") %>%
+  arrange(desc(issued))
 ```
 
-- **Wünnemann, F.**, Tadjo, T. F., Beaudoin, M., Lalonde, S., Lo, K. S., & Lettre, G. (2021). CRISPR perturbations at many coronary artery disease loci impair vascular endothelial cell functions. bioRxiv.
+\faIcon{laptop-code} Computational skills
+============================
 
-- **Wünnemann, F.**&ast, Ta‐Shma, A.&ast, Preuss, C., Leclerc, S., Vliet, P. P. van, Oneglia, A., Thibeault, M., Nordquist, E., Lincoln, J., Scharfenberg, F., & others. (2020). Loss of ADAMTS19 causes progressive non‐syndromic heart valve disease. Nature Genetics, 52(1), 40–47.
-**&ast;Authors contributed equally**
+- **Ubuntu**: Bash scripting
+- **R**: Rshiny application development, Rmarkdown, Package development, OMICS data analysis (RNA-seq, single-cell OMICS)
+- **Python**: Basic usage, jupyter notebooks, basic computer vision applications
+- **Containers**: Docker container creation, Singularity usage
+- **Galaxy project**: Creation of galaxy tools and wrappers
 
-- Audain, E., Wilsdon, A., Breckpot, J., Izarzugaza, J. M., Fitzgerald, T. W., Kahlert, A., Sifrim, A., **Wuennemann, F.**, Perez‐Riverol, Y., Abdul‐Khaliq, H., & others. (2020). Integrative analysis of genomic variants reveals new associations of candidate haploinsufficient genes with congenital heart disease. bioRxiv.
+\faIcon{language} Languages
+============================
 
-- Gould, R. A., Aziz, H., Woods, C. E., Seman‐Senderos, M. A., Sparks, E., Preuss, C., **Wünnemann, F.**, Bedja, D., Moats, C. R., McClymont, S. A., & others. (2019). ROBO4 variants predispose individuals to bicuspid aortic valve and thoracic aortic aneurysm. Nature Genetics, 51(1), 42–50.
-
-- Luyckx, I., Kumar, A. A., Reyniers, E., Dekeyser, E., Vanderstraeten, K., Vandeweyer, G., **Wünnemann, F.**, Preuss, C., Mazzella, J.‐M., Goudot, G., & others. (2019). Copy number variation analysis in bicuspid aor‐ tic valve‐related aortopathy identifies TBX20 as a contributing gene. European Journal of Human Genetics, 27(7), 1033–1043.
-
-- **Wünnemann, F.**, Sin Lo, K., Langford‐Avelar, A., Busseuil, D., Dubé, M.‐P., Tardif, J.‐C., & Lettre, G. (2019). Validation of genome‐wide polygenic risk scores for coronary artery disease in french canadians. Circulation: Genomic and Precision Medicine, 12(6), e002481.
-
-- Gillis, E., Kumar, A. A., Luyckx, I., Preuss, C., Cannaerts, E., Van De Beek, G., Wieschendorf, B., Alaerts, M., Bolar, N., Vandeweyer, G., & **others.** (2017). Candidate gene resequencing in a large bicuspid aortic valve‐ associated thoracic aortic aneurysm cohort: SMAD6 as an important contributor. Frontiers in Physiology, 8, 400.
-
-- **Wünnemann, F.**, Kokta, V., Leclerc, S., Thibeault, M., McCuaig, C., Hatami, A., Stheneur, C., Grenier, J.‐C.,
-Awadalla, P., Mitchell, G. A., & others. (2016). Aortic dilatation associated with a de novo mutation in the SOX18 gene: Expanding the clinical spectrum of hypotrichosis‐lymphedema‐telangiectasia syndrome. Canadian Journal of Cardiology, 32(1), 135–e1.
-
-- Preuss, C.&ast, Capredon, M.&ast, **Wünnemann, F.**&ast, Chetaille, P., Prince, A., Godard, B., Leclerc, S., Sobreira, N., Ling, H., Awadalla, P., & others. (2016). Family based whole exome sequencing reveals the multifaceted role of notch signaling in congenital heart disease. PLoS Genetics, 12(10), e1006335.
-**&ast;Authors contributed equally**
-
-- Chetaille, P., Preuss, C., Burkhard, S., Côté, J.‐M., Houde, C., Castilloux, J., Piché, J., Gosset, N., Leclerc, S.,
-**Wünnemann, F.**, & others. (2014). Mutations in SGOL1 cause a novel cohesinopathy affecting heart and gut rhythm. Nature Genetics, 46(11), 1245.
-
+- German (mother-language)
+- English (fluent)
+- French (Proficient)
