@@ -3,7 +3,11 @@ headcolor: 00785c
 name: Florian
 surname: W&uuml;nnemann
 position: "Postdoc at the Lettre lab"
+<<<<<<< HEAD
 address: "5000 Rue Bélanger, Montréal, QC H1T 1C8"
+=======
+address: "Montreal Heart Institute, 5000 Rue Bélanger, Montréal, QC H1T 1C8"
+>>>>>>> 0474f2049ddd1a25f1fc8ecc4617b055ca189fe4
 # phone: +1 514 516 6667
 www: florianwuennemann.com
 email: "flowuenne@gmail.com"
@@ -11,7 +15,7 @@ twitter: flowuenne
 github: flowuenne
 #linkedin: florian-w&uuml;nnemann-322357189
 date: "`r format(Sys.time(), '%B %Y')`"
-aboutme: "**Research and scientific interests**:	Human genetics, Single cell OMICS, Heart development, Bioinformatics, Open source software"
+aboutme: "**Research and scientific interests**:	Human genetics, Single cell OMICS, Heart development, Bioinformatics, Machine Learning, Computer vision, Open source software"
 docname: RÉSUMÉ
 output: 
   vitae::awesomecv:
@@ -34,7 +38,7 @@ library(glue)
 library(fontawesome)
 ```
 
-\faIcon{plane} Research experience
+\faIcon{flask} Research experience
 ============================
 
 ```{r, research_experience}
@@ -75,6 +79,7 @@ readr::read_csv("scholarships.csv") %>%
 
 ```{r, awards}
 tribble(~time, ~award, ~place,
+        "2021/06","Poster prize: Prix Fonds de recherche du Québec (FRQS) (Recherche fondamentale doctorale / Postdoc)","Montreal,Canada",
         "2019/06","Best oral presentation award, 22nd Montreal Heart Institute research day","Montreal,Canada",
         "2017/05","Best oral presentation award, 32nd student congress at the CHU Sainte-Justine","Montreal, Canada",
         "2016/05","Markwald award for best oral presentation, Weinstein Cardiovascular Development and Regeneration Conference 2016","Durham, USA") %>%
@@ -83,7 +88,7 @@ tribble(~time, ~award, ~place,
                  with = place)
 ```
 
-
+\newpage
 \faIcon{file-powerpoint} Presentations
 ============================
 
@@ -107,6 +112,16 @@ readr::read_csv("presentations.csv") %>%
                    what = title, where = location)
 ```
 
+\faIcon{scroll} Preprints
+============================
+
+```{r}
+library(dplyr)
+
+bibliography_entries("preprint_references.bib") %>%
+  arrange(desc(issued))
+```
+
 \faIcon{scroll} Publications
 ============================
 
@@ -120,10 +135,10 @@ bibliography_entries("references.bib") %>%
 \faIcon{laptop-code} Computational skills
 ============================
 
-- **Ubuntu**: Bash scripting
-- **R**: Rshiny application development, Rmarkdown, Package development, OMICS data analysis (RNA-seq, single-cell OMICS)
-- **Python**: Basic usage, jupyter notebooks, basic computer vision applications
-- **Containers**: Docker container creation, Singularity usage
+- **General**: GWAS analysis, Exome/Genome variant calling, Plink, bedtools
+- **R**: Rshiny application development, Rmarkdown, Package development, OMICS data analysis (RNA-seq, single-cell OMICS), reticulate
+- **Python**: Jupyter notebooks, basic computer vision applications, single-cell OMICS analysis
+- **Containers**: Docker container creation, Singularity usage, Nextflow
 - **Galaxy project**: Creation of galaxy tools and wrappers
 
 \faIcon{language} Languages
@@ -131,4 +146,4 @@ bibliography_entries("references.bib") %>%
 
 - German (mother-language)
 - English (fluent)
-- French (Proficient)
+- French (fluent)
