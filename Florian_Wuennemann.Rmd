@@ -2,7 +2,7 @@
 headcolor: 00785c
 name: Florian
 surname: W&uuml;nnemann
-position: "Postdoctoc at the Lettre lab"
+position: "Postdoc at the Lettre lab"
 address: "5000 Rue Bélanger, Montréal, QC H1T 1C8"
 # phone: +1 514 516 6667
 www: florianwuennemann.com
