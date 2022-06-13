@@ -2,12 +2,8 @@
 headcolor: 00785c
 name: Florian
 surname: W&uuml;nnemann
-position: "Postdoc at the Lettre lab"
-<<<<<<< HEAD
-address: "5000 Rue Bélanger, Montréal, QC H1T 1C8"
-=======
-address: "Montreal Heart Institute, 5000 Rue Bélanger, Montréal, QC H1T 1C8"
->>>>>>> 0474f2049ddd1a25f1fc8ecc4617b055ca189fe4
+position: "Postdoc in the Schapiro lab"
+address: "Im Neuenheimer Feld 130, 69120 Heidelberg, Germany"
 # phone: +1 514 516 6667
 www: florianwuennemann.com
 email: "flowuenne@gmail.com"
