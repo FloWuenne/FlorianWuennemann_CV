@@ -1,2 +1,2 @@
 # FlorianWuennemann_CV
-Up to date CV compiled with the R vitae package
+My CV created using the [Rvitae package](https://github.com/mitchelloharawild/vitae) and automatically knit into a pdf using a docker container and Github actions (Thanks to @mlampros for publishing [his Github action implementation](https://github.com/mlampros/My.CVitae/blob/master/README.md).)
