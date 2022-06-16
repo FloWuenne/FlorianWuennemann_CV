@@ -27,6 +27,7 @@ jobs:
          Rscript -e "rmarkdown::render(input = file.path(getwd(), 'Florian_Wuennemann.Rmd'), params = list(work_dir = getwd()))"
      - name: Commit files
        run: |
+          git config --global --add safe.directory /__w/FlorianWuennemann_CV/FlorianWuennemann_CV
           git status
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
