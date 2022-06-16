@@ -32,13 +32,14 @@ library(vitae)
 library(tibble)
 library(glue)
 library(fontawesome)
+library(here)
 ```
 
 \faIcon{flask} Research experience
 ============================
 
 ```{r, research_experience}
-readr::read_csv("experience.csv") %>% 
+readr::read_csv(here("./data/experience.csv")) %>% 
   detailed_entries(what = position, 
                    when = glue::glue("{start} - {end}"),
                    with = institution,
@@ -52,7 +53,7 @@ readr::read_csv("experience.csv") %>%
 
 ```{r, education}
 library(tibble)
-readr::read_csv("education.csv") %>%
+readr::read_csv(here("./data/education.csv")) %>%
   detailed_entries(what = degree,
                    when = glue("{start} - {end}"),
                    with = institution,
@@ -64,7 +65,7 @@ readr::read_csv("education.csv") %>%
 ============================
 
 ```{r, funding}
-readr::read_csv("scholarships.csv") %>% 
+readr::read_csv(here("./data/scholarships.csv")) %>% 
    detailed_entries(what = scholarship, 
                  when = glue::glue("{start} - {end}"))
 ```
@@ -89,7 +90,7 @@ tribble(~time, ~award, ~place,
 ============================
 
 ```{r presentations}
-readr::read_csv("presentations.csv") %>% 
+readr::read_csv(here("./data/presentations.csv")) %>% 
   subset(type == "Oral") %>%
   detailed_entries(with = conference, 
                    when = glue::glue("{start} - {end}"), 
@@ -101,7 +102,7 @@ readr::read_csv("presentations.csv") %>%
 ============================
 
 ```{r}
-readr::read_csv("presentations.csv") %>% 
+readr::read_csv(here("./data/presentations.csv")) %>% 
   subset(type == "Poster") %>%
   detailed_entries(with = conference, 
                    when = glue::glue("{start} - {end}"), 
@@ -114,7 +115,7 @@ readr::read_csv("presentations.csv") %>%
 ```{r}
 library(dplyr)
 
-bibliography_entries("preprint_references.bib") %>%
+bibliography_entries(here("./data/preprint_references.bib")) %>%
   arrange(desc(issued))
 ```
 
@@ -124,7 +125,7 @@ bibliography_entries("preprint_references.bib") %>%
 ```{r}
 library(dplyr)
 
-bibliography_entries("references.bib") %>%
+bibliography_entries(here("./data/references.bib")) %>%
   arrange(desc(issued))
 ```
 

@@ -1,0 +1,376 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{00785c}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Florian}{Wünnemann}
+
+\position{Postdoc in the Schapiro lab}
+\address{Im Neuenheimer Feld 130, 69120 Heidelberg, Germany}
+
+\email{\href{mailto:flowuenne@gmail.com}{\nolinkurl{flowuenne@gmail.com}}}
+\homepage{florianwuennemann.com}
+\github{flowuenne}
+\twitter{flowuenne}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+\quote{\textbf{Research and scientific interests}: Human genetics,
+Single cell OMICS, Heart development, Bioinformatics, Machine Learning,
+Computer vision, Open source software}
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+\usepackage{float} \usepackage{multicol} \usepackage{colortbl}
+
+\arrayrulecolor{white}
+
+\usepackage{hhline}
+
+\definecolor{light-gray}{gray}{0.95}
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {June 2022}
+    {Florian Wünnemann~~~·~~~RÉSUMÉ}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{research-experience}{%
+\section{\texorpdfstring{\faIcon{flask} Research
+experience}{ Research experience}}\label{research-experience}}
+
+\begin{cventries}
+    \cventry{Postdoc in the Schapiro Lab}{University Hospital Heidelberg}{Heidelberg, Germany}{Jan2022 - ongoing}{\begin{cvitems}
+\item Defining and modulating cellular neighbourhoods in myocardial infarction models using spatial OMICS technologies
+\end{cvitems}}
+    \cventry{Postdoc in the Lettre lab}{Montreal Heart Institute}{Montreal, Canada}{Aug2018 - Aug2021}{\begin{cvitems}
+\item Projects focused on high-throughput CRISPR screens, polygenic risk scores, genetics of heart valve disease and development of single-cell screens to investigate human cellular traits.
+\end{cvitems}}
+    \cventry{Professionnel recherche niv. II}{Universite de Sherbrooke}{Sherbrooke, Canada}{Jan 2019 - ongoing}{\begin{cvitems}
+\item Part of the GenAP initiative (www.genap.ca) as single-cell expert, to include single-cell tools into the GenAP2 platform. Development of Galaxy tools, Rshiny applications and docker containers for single-cell analysis.
+\end{cvitems}}
+    \cventry{Student Research assistant}{IEB, University of Münster}{Münster, Germany}{Sept2011 - Jul2012}{\begin{cvitems}
+\item Acquisti group: Analysis of genomes and metagenomes in the context of nutrient limitation and fertilization.
+\end{cvitems}}
+    \cventry{Student assistant}{IEB, University of Münster}{Münster, Germany}{Mar2011 - May 2011}{\begin{cvitems}
+\item Bornberg-Bauer group
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{education}{%
+\section{\texorpdfstring{\faIcon{university}
+Education}{ Education}}\label{education}}
+
+\begin{cventries}
+    \cventry{Ph.D. (Dr.rer.nat) - Life sciences}{University of Münster / CHU Sainte Justine Research Center}{Münster, Germany / Montreal, Canada}{Apr.2014 - Apr.2018}{\begin{cvitems}
+\item Thesis title: The role of genetic factors in pathogenesis and progression of cardiac malformations
+\end{cvitems}}
+    \cventry{MSc in Life sciences}{University of Münster}{Münster, Germany}{Oct.2011 - Feb.2014}{\begin{cvitems}
+\item Thesis title: Functional and genetic characterization of a novel arrhythmic syndrome
+\end{cvitems}}
+    \cventry{BSc in Life sciences}{University of Münster}{Münster, Germany}{Oct.2008 - Sep.2011}{\begin{cvitems}
+\item Thesis title: Impact of nutrient limitation in insects: Comparative genomics of the pea aphid and the human body louse
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{funding-history}{%
+\section{\texorpdfstring{\faIcon{dollar-sign} Funding
+History}{ Funding History}}\label{funding-history}}
+
+\begin{cventries}
+    \cventry{Postdoctoral Training (Canadian citizens and permanent residents) scholarship, Fonds de recherche Québec santé (FRQS)}{}{}{2019 - 2021}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{achievements-and-awards}{%
+\section{\texorpdfstring{\faIcon{award} Achievements and
+Awards}{ Achievements and Awards}}\label{achievements-and-awards}}
+
+\begin{cvhonors}
+    \cvhonor{}{Poster prize: Prix Fonds de recherche du Québec (FRQS) (Recherche fondamentale doctorale / Postdoc)}{Montreal,Canada}{2021/06}
+    \cvhonor{}{Best oral presentation award, 22nd Montreal Heart Institute research day}{Montreal,Canada}{2019/06}
+    \cvhonor{}{Best oral presentation award, 32nd student congress at the CHU Sainte-Justine}{Montreal, Canada}{2017/05}
+    \cvhonor{}{Markwald award for best oral presentation, Weinstein Cardiovascular Development and Regeneration Conference 2016}{Durham, USA}{2016/05}
+\end{cvhonors}
+
+\newpage
+
+\hypertarget{presentations}{%
+\section{\texorpdfstring{\faIcon{file-powerpoint}
+Presentations}{ Presentations}}\label{presentations}}
+
+\begin{cventries}
+    \cventry{Prioritization of genomic loci for coronary artery disease using targeted CRISPR screens for endothelial dysfunction}{American Society of Human Genetics (ASHG) Meeting 2019}{Houston, Texas, USA}{15.10.2019 - 19.10.2019}{}\vspace{-4.0mm}
+    \cventry{Validation of genome-wide polygenic risk scores for coronary artery disease in French Canadians}{XXIIe Journée de la recherche ICM}{Montreal, Canada}{06.06.2019 - 06.06.2019}{}\vspace{-4.0mm}
+    \cventry{Single cell landscape of mammalian heart maturation}{7th annual MGSE Symposium}{Münster, Germany}{21.03.2018 - 22.03.2018}{}\vspace{-4.0mm}
+    \cventry{Identification of a novel marker for valve maturation: Loss of ADAMTS19 function causes progressive valve disease in mice and men}{American Society of Human Genetics (ASHG) Meeting 2017}{Orlando, Florida, USA}{18.10.2017 - 18.10.2017}{}\vspace{-4.0mm}
+    \cventry{Heart valve dysfunction in men and mice is caused by loss of function mutations in Adamts19, a novel marker for valvular interstitial cells}{Congrès de la recherche des étudiantes des cycles supérieurs et des post-doctorants en recherche au CHU Sainte-Justine}{Montreal, Canada}{26.05.2017 - 26.05.2017}{}\vspace{-4.0mm}
+    \cventry{Loss of Adamts19, a novel marker for valvular interstitial cell populations during valve maturation, causes aortic valve dysfunction}{Weinstein Cardiovascular Development and Regeneration Conference 2016}{Durham, North Carolina, USA}{18.05.2016 - 21.05.2016}{}\vspace{-4.0mm}
+    \cventry{ACTransDB: An online database for Acanthamoeba castellani transcripts,}{Evolgen, collaborative meeting on genome evolution}{Ciążeń, Poland}{27.06.2012 - 28.06.2012}{}\vspace{-4.0mm}
+    \cventry{Biogeochemistry meets molecular evolution via metagenomics: tracing nitrogen fluxes from ecosystems to genomes in microbial communities}{2nd Muenster graduate school evolution symposium}{Münster, Germany}{18.06.2012 - 19.06.2012}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{poster-presentations}{%
+\section{\texorpdfstring{\faIcon{chalkboard-teacher} Poster
+presentations}{ Poster presentations}}\label{poster-presentations}}
+
+\begin{cventries}
+    \cventry{CRISPR perturbations at many coronary artery disease loci impair vascular endothelial cell functions}{XXIIIe Journée de la recherche ICM}{Montreal, Canada}{17.06.2021 - 17.06.2021}{}\vspace{-4.0mm}
+    \cventry{CRISPR perturbations at many coronary artery disease loci impair vascular endothelial cell functions}{Cold Spring Harbor Laboratories: The Biology of Genomes}{Virtual}{11.05.2021 - 14.05.2021}{}\vspace{-4.0mm}
+    \cventry{A single-cell perspective on growth and maturation pathways in the mouse heart.}{Weinstein Cardiovascular Development and Regeneration Conference}{Nara, Japan}{16.05.2018 - 18.05.2018}{}\vspace{-4.0mm}
+    \cventry{De novo mutation in SOX18 causes a novel form of Hypotrichosis-Lymphedema-Telangiectasia with severe vascular defects}{American Society of Human Genetics (ASHG) 2014}{San Diego, California, USA}{18.10.2014 - 22.10.2014}{}\vspace{-4.0mm}
+    \cventry{Soil metagenomics to unravel the signature of fertilizers on the molecular composition of the bacterial ribosome}{42nd Annual Meeting of the Ecological Society of Germany, Austria and Switzerland 2012}{Lueneburg, Germany}{10.09.2012 - 14.09.2012}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{preprints}{%
+\section{\texorpdfstring{\faIcon{scroll}
+Preprints}{ Preprints}}\label{preprints}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-wunnemann2021crispr}{}}%
+\CSLLeftMargin{1. }
+\CSLRightInline{Wünnemann, F., Tadjo, T. F., Beaudoin, M., Lalonde, S.,
+Lo, K. S., \& Lettre, G. (2021). CRISPR perturbations at many coronary
+artery disease loci impair vascular endothelial cell functions.
+\emph{bioRxiv}.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-audain2020integrative}{}}%
+\CSLLeftMargin{2. }
+\CSLRightInline{Audain, E., Wilsdon, A., Breckpot, J., Izarzugaza, J.
+M., Fitzgerald, T. W., Kahlert, A., Sifrim, A., Wünnemann, F.,
+Perez-Riverol, Y., Abdul-Khaliq, H.others. (2020). Integrative analysis
+of genomic variants reveals new associations of candidate
+haploinsufficient genes with congenital heart disease. \emph{bioRxiv}.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-churakov20204}{}}%
+\CSLLeftMargin{3. }
+\CSLRightInline{Churakov, G., Kuritzin, A., Chukharev, K., Zhang, F.,
+Wünnemann, F., Ulyantsev, V., \& Schmitz, J. (2020). A 4-lineage
+statistical suite to evaluate the support of large-scale retrotransposon
+insertion data to reconstruct evolutionary trees. \emph{bioRxiv}.}
+
+\hypertarget{publications}{%
+\section{\texorpdfstring{\faIcon{scroll}
+Publications}{ Publications}}\label{publications}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-wunnemann2020loss}{}}%
+\CSLLeftMargin{1. }
+\CSLRightInline{Wünnemann, F., Ta-Shma, A., Preuss, C., Leclerc, S.,
+Vliet, P. P. van, Oneglia, A., Thibeault, M., Nordquist, E., Lincoln,
+J., Scharfenberg, F.others. (2020). Loss of ADAMTS19 causes progressive
+non-syndromic heart valve disease. \emph{Nature Genetics}, \emph{52}(1),
+40--47.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-gould2019robo4}{}}%
+\CSLLeftMargin{2. }
+\CSLRightInline{Gould, R. A., Aziz, H., Woods, C. E., Seman-Senderos, M.
+A., Sparks, E., Preuss, C., Wünnemann, F., Bedja, D., Moats, C. R.,
+McClymont, S. A.others. (2019). ROBO4 variants predispose individuals to
+bicuspid aortic valve and thoracic aortic aneurysm. \emph{Nature
+Genetics}, \emph{51}(1), 42--50.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-luyckx2019copy}{}}%
+\CSLLeftMargin{3. }
+\CSLRightInline{Luyckx, I., Kumar, A. A., Reyniers, E., Dekeyser, E.,
+Vanderstraeten, K., Vandeweyer, G., Wünnemann, F., Preuss, C., Mazzella,
+J.-M., Goudot, G.others. (2019). Copy number variation analysis in
+bicuspid aortic valve-related aortopathy identifies TBX20 as a
+contributing gene. \emph{European Journal of Human Genetics},
+\emph{27}(7), 1033--1043.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wunnemann2019validation}{}}%
+\CSLLeftMargin{4. }
+\CSLRightInline{Wünnemann, F., Sin Lo, K., Langford-Avelar, A.,
+Busseuil, D., Dubé, M.-P., Tardif, J.-C., \& Lettre, G. (2019).
+Validation of genome-wide polygenic risk scores for coronary artery
+disease in french canadians. \emph{Circulation: Genomic and Precision
+Medicine}, \emph{12}(6), e002481.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-preuss2017heart}{}}%
+\CSLLeftMargin{5. }
+\CSLRightInline{Preuss, C., Wünnemann, F., \& Andelfinger, G. (2017). At
+the heart of a complex disease {``molecular genetics of congenital heart
+disease.''} \emph{eLS}, 1--9.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-gillis2017candidate}{}}%
+\CSLLeftMargin{6. }
+\CSLRightInline{Gillis, E., Kumar, A. A., Luyckx, I., Preuss, C.,
+Cannaerts, E., Van De Beek, G., Wieschendorf, B., Alaerts, M., Bolar,
+N., Vandeweyer, G.others. (2017). Candidate gene resequencing in a large
+bicuspid aortic valve-associated thoracic aortic aneurysm cohort: SMAD6
+as an important contributor. \emph{Frontiers in Physiology}, \emph{8},
+400.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wunnemann2016aortic}{}}%
+\CSLLeftMargin{7. }
+\CSLRightInline{Wünnemann, F., Kokta, V., Leclerc, S., Thibeault, M.,
+McCuaig, C., Hatami, A., Stheneur, C., Grenier, J.-C., Awadalla, P.,
+Mitchell, G. A.others. (2016). Aortic dilatation associated with a de
+novo mutation in the SOX18 gene: Expanding the clinical spectrum of
+hypotrichosis-lymphedema-telangiectasia syndrome. \emph{Canadian Journal
+of Cardiology}, \emph{32}(1), 135--e1.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-preuss2016family}{}}%
+\CSLLeftMargin{8. }
+\CSLRightInline{Preuss, C., Capredon, M., Wünnemann, F., Chetaille, P.,
+Prince, A., Godard, B., Leclerc, S., Sobreira, N., Ling, H., Awadalla,
+P.others. (2016). Family based whole exome sequencing reveals the
+multifaceted role of notch signaling in congenital heart disease.
+\emph{PLoS Genetics}, \emph{12}(10), e1006335.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wunnemann2016molecular}{}}%
+\CSLLeftMargin{9. }
+\CSLRightInline{Wünnemann, F., \& Andelfinger, G. U. (2016). Molecular
+pathways and animal models of hypoplastic left heart syndrome. In
+\emph{Congenital heart diseases: The broken heart} (pp. 649--664).
+Springer, Vienna.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-chetaille2014mutations}{}}%
+\CSLLeftMargin{10. }
+\CSLRightInline{Chetaille, P., Preuss, C., Burkhard, S., Côté, J.-M.,
+Houde, C., Castilloux, J., Piché, J., Gosset, N., Leclerc, S.,
+Wünnemann, F.others. (2014). Mutations in SGOL1 cause a novel
+cohesinopathy affecting heart and gut rhythm. \emph{Nature Genetics},
+\emph{46}(11), 1245.}
+
+\hypertarget{computational-skills}{%
+\section{\texorpdfstring{\faIcon{laptop-code} Computational
+skills}{ Computational skills}}\label{computational-skills}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{General}: GWAS analysis, Exome/Genome variant calling, Plink,
+  bedtools
+\item
+  \textbf{R}: Rshiny application development, Rmarkdown, Package
+  development, OMICS data analysis (RNA-seq, single-cell OMICS),
+  reticulate
+\item
+  \textbf{Python}: Jupyter notebooks, basic computer vision
+  applications, single-cell OMICS analysis
+\item
+  \textbf{Containers}: Docker container creation, Singularity usage,
+  Nextflow
+\item
+  \textbf{Galaxy project}: Creation of galaxy tools and wrappers
+\end{itemize}
+
+\hypertarget{languages}{%
+\section{\texorpdfstring{\faIcon{language}
+Languages}{ Languages}}\label{languages}}
+
+\begin{itemize}
+\tightlist
+\item
+  German (mother-language)
+\item
+  English (fluent)
+\item
+  French (fluent)
+\end{itemize}
+
+
+
+\end{document}
