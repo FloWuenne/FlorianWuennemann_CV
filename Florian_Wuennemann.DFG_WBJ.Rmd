@@ -35,7 +35,7 @@ library(fontawesome)
 library(here)
 ```
 
-\faIcon{flask} Research experience
+Research experience
 ============================
 
 ```{r, research_experience}
@@ -48,7 +48,7 @@ readr::read_csv(here("./data/experience.csv")) %>%
 ```
 
 
-\faIcon{university} Education
+Education
 ============================
 
 ```{r, education}
@@ -61,7 +61,7 @@ readr::read_csv(here("./data/education.csv")) %>%
                    details)
 ```
 
-\faIcon{dollar-sign} Funding History
+Funding History
 ============================
 
 ```{r, funding}
@@ -71,7 +71,7 @@ readr::read_csv(here("./data/scholarships.csv")) %>%
 ```
 
 
-\faIcon{award} Achievements and Awards
+Achievements and Awards
 ============================
 
 ```{r, awards}
@@ -85,7 +85,7 @@ tribble(~time, ~award, ~place,
                  with = place)
 ```
 
-\faIcon{file-powerpoint} Presentations
+Presentations
 ============================
 
 ```{r presentations}
@@ -97,7 +97,7 @@ readr::read_csv(here("./data/presentations.csv")) %>%
                    where = location)
 ```
 
-\faIcon{chalkboard-teacher} Poster presentations
+Poster presentations
 ============================
 
 ```{r}
@@ -108,17 +108,7 @@ readr::read_csv(here("./data/presentations.csv")) %>%
                    what = title, where = location)
 ```
 
-\faIcon{scroll} Preprints
-============================
-
-```{r}
-library(dplyr)
-
-bibliography_entries(here("./data/preprint_references.bib")) %>%
-  arrange(desc(issued))
-```
-
-\faIcon{scroll} Publications
+Publications
 ============================
 
 ```{r}
@@ -128,7 +118,7 @@ bibliography_entries(here("./data/references.bib")) %>%
   arrange(desc(issued))
 ```
 
-\faIcon{laptop-code} Computational skills
+Computational skills
 ============================
 
 - **General**: GWAS analysis, Exome/Genome variant calling, Plink, bedtools
@@ -137,7 +127,7 @@ bibliography_entries(here("./data/references.bib")) %>%
 - **Containers**: Docker container creation, Singularity usage, Nextflow
 - **Galaxy project**: Creation of galaxy tools and wrappers
 
-\faIcon{language} Languages
+Languages
 ============================
 
 - German (mother-language)
