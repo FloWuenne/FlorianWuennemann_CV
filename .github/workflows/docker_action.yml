@@ -1,6 +1,6 @@
 on:
   push:
-    branches: main
+    branches: dfg_wbj
 
 name: docker_cv
 
@@ -24,7 +24,7 @@ jobs:
      - name: render the curriculum vitae
        run: |
          Rscript -e "print(getwd())"
-         Rscript -e "rmarkdown::render(input = file.path(getwd(), 'Florian_Wuennemann.Rmd'), params = list(work_dir = getwd()))"
+         Rscript -e "rmarkdown::render(input = file.path(getwd(), 'Florian_Wuennemann.DFG_WBJ.Rmd'), params = list(work_dir = getwd()))"
      - name: Commit files
        run: |
           git config --global --add safe.directory /__w/FlorianWuennemann_CV/FlorianWuennemann_CV
