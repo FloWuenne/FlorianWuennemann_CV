@@ -2,7 +2,7 @@
 headcolor: 00785c
 name: Florian
 surname: W&uuml;nnemann
-position: "Postdoc in the Schapiro lab"
+position: "Postdoc in the group of Denis Schapiro"
 address: "Im Neuenheimer Feld 130, 69120 Heidelberg, Germany"
 # phone: +1 514 516 6667
 www: florianwuennemann.com
@@ -11,7 +11,7 @@ twitter: flowuenne
 github: flowuenne
 #linkedin: florian-w&uuml;nnemann-322357189
 date: "`r format(Sys.time(), '%B %Y')`"
-aboutme: "**Research and scientific interests**:	Human genetics, Single cell OMICS, Heart development, Bioinformatics, Machine Learning, Computer vision, Open source software"
+aboutme: "**Research and scientific interests**:	Spatial OMICS, Cardiovascular disease, Human genetics, Bioinformatics, Machine Learning, Computer vision"
 docname: RÉSUMÉ
 output: 
   vitae::awesomecv:
@@ -121,10 +121,10 @@ bibliography_entries(here("./data/references.bib")) %>%
 Computational skills
 ============================
 
-- **General**: GWAS analysis, Exome/Genome variant calling, Plink, bedtools
+- **General**: GWAS analysis, Exome/Genome variant calling, Plink, bedtools, Image analysis (Fiji, Napari, QuPath)
 - **R**: Rshiny application development, Rmarkdown, Package development, OMICS data analysis (RNA-seq, single-cell OMICS), reticulate
 - **Python**: Jupyter notebooks, basic computer vision applications, single-cell OMICS analysis
-- **Containers**: Docker container creation, Singularity usage, Nextflow
+- **Containers**: Docker container creation, Singularity usage, Nextflow workflow creation and execution
 - **Galaxy project**: Creation of galaxy tools and wrappers
 
 Languages
