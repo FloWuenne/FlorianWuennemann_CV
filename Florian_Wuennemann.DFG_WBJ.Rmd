@@ -115,7 +115,7 @@ Publications
 library(dplyr)
 
 bibliography_entries(here("./data/references.bib")) %>%
-  arrange(desc(year))
+  arrange(desc(issued))
 ```
 
 Computational skills
