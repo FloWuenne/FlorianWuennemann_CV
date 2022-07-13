@@ -77,6 +77,7 @@ Achievements and Awards
 ```{r, awards}
 tribble(~time, ~award, ~place,
         "2021/06","Poster prize: Prix Fonds de recherche du Québec (FRQS) (Recherche fondamentale doctorale / Postdoc)","Montreal,Canada",
+        "2019/10","Abstract prize: Semifinalist 2019 Charles J. Epstein Trainee Awards for Excellence in Human Genetics Research","Houston, Texas, USA",
         "2019/06","Best oral presentation award, 22nd Montreal Heart Institute research day","Montreal,Canada",
         "2017/05","Best oral presentation award, 32nd student congress at the CHU Sainte-Justine","Montreal, Canada",
         "2016/05","Markwald award for best oral presentation, Weinstein Cardiovascular Development and Regeneration Conference 2016","Durham, USA") %>%
