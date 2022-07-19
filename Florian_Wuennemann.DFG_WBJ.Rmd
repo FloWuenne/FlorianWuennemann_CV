@@ -9,8 +9,9 @@ www: florianwuennemann.com
 email: "flowuenne@gmail.com"
 twitter: flowuenne
 github: flowuenne
-#linkedin: florian-w&uuml;nnemann-322357189
+linkedin: florian-w&uuml;nnemann-322357189
 date: "`r format(Sys.time(), '%B %Y')`"
+csl: https://forum.paperpile.com/uploads/default/original/1X/c28acabfd239a53dcf3d45a21b8dbf7f7cafe87a.csl
 aboutme: "**Research and scientific interests**:	Spatial OMICS, Cardiovascular disease, Human genetics, Bioinformatics, Machine Learning, Computer vision"
 docname: RÉSUMÉ
 output: 
@@ -112,10 +113,10 @@ readr::read_csv(here("./data/presentations.csv")) %>%
 Publications
 ============================
 
-```{r}
+```{r publications}
 library(dplyr)
 
-bibliography_entries(here("./data/references.bib")) %>%
+vitae::bibliography_entries(here("./data/references.bib")) %>%
   arrange(desc(issued))
 ```
 
