@@ -85,6 +85,18 @@ tribble(~time, ~award, ~place,
                  with = place)
 ```
 
+\faIcon{file-powerpoint} Invited Presentations
+============================
+
+```{r invited_presentations}
+readr::read_csv(here("./data/presentations.csv")) %>% 
+  subset(type == "Invited") %>%
+  detailed_entries(with = conference, 
+                   when = glue::glue("{start} - {end}"), 
+                   what = title,
+                   where = location)
+```
+
 \faIcon{file-powerpoint} Presentations
 ============================
 
