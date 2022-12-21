@@ -17,17 +17,11 @@ output:
   vitae::awesomecv:
     keep_tex: false
 always_allow_html: yes
-header-includes:
-  \usepackage{float}
-  \usepackage{multicol}
-  \usepackage{colortbl}
-  \arrayrulecolor{white}
-  \usepackage{hhline}
-  \definecolor{light-gray}{gray}{0.95}
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.verbose = TRUE)
 library(vitae)
 library(tibble)
 library(glue)
@@ -85,7 +79,7 @@ tribble(~time, ~award, ~place,
                  with = place)
 ```
 
-\faIcon{file-powerpoint} Invited Presentations
+\faIcon{paper-plane} Invited Presentations
 ============================
 
 ```{r invited_presentations}
@@ -147,7 +141,7 @@ bibliography_entries(here("./data/references.bib")) %>%
 - **R**: Rshiny application development, Rmarkdown, Package development, OMICS data analysis (RNA-seq, single-cell OMICS), reticulate
 - **Python**: Jupyter notebooks, basic computer vision applications, single-cell OMICS analysis
 - **Containers**: Docker container creation, Singularity usage, Nextflow workflow creation and execution
-- **Galaxy project**: Creation of galaxy tools and wrappers
+- **Galaxy project**: Creation of galaxy tools and wrappers, setup of https://spatialomics.usegalaxy.eu/
 
 \faIcon{language} Languages
 ============================
@@ -155,3 +149,4 @@ bibliography_entries(here("./data/references.bib")) %>%
 - German (mother-language)
 - English (fluent)
 - French (fluent)
+- Spanish (Beginner)
