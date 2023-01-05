@@ -64,6 +64,7 @@ readr::read_csv(here("./data/scholarships.csv")) %>%
                  when = glue::glue("{start} - {end}"))
 ```
 
+\newpage
 
 \faIcon{award} Achievements and Awards
 ============================
