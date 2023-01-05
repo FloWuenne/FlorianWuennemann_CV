@@ -52,7 +52,7 @@ readr::read_csv(here("./data/education.csv")) %>%
                    when = glue("{start} - {end}"),
                    with = institution,
                    where = where,
-                   details)
+                   why = details)
 ```
 
 \faIcon{dollar-sign} Funding History
