@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 position,start_detail,start,May 2011,end,institution,where,description
 Postdoc in the Schapiro Lab,Jan2022,Jan. 2022,ongoing,ongoing,University Hospital Heidelberg,"Heidelberg, Germany",Defining and modulating cellular neighbourhoods in myocardial infarction models using spatial OMICS technologies
 Postdoc in the Lettre lab,Aug2018,Aug .2018,Aug2021,Aug. 2021,Montreal Heart Institute,"Montreal, Canada","Projects focused on high-throughput CRISPR screens, polygenic risk scores, genetics of heart valve disease and development of single-cell screens to investigate human cellular traits."
 Professionnel recherche niv. II ,Jan 2019,Jan. 2019,Jan 2022,Jan. 2022,Universite de Sherbrooke,"Sherbrooke, Canada","Part of the GenAP initiative (www.genap.ca) as single-cell expert, to include single-cell tools into the GenAP2 platform. Development of Galaxy tools, Rshiny applications and docker containers for single-cell analysis."
 Student Research assistant,Sep2011,Sep. 2011,Jul2012,July 2012,"IEB, University of Münster","Münster, Germany",Acquisti group: Analysis of genomes and metagenomes in the context of nutrient limitation and fertilization.
 Student assistant,Mar2011,Mar. 2011,May 2011,May 2011,"IEB, University of Münster","Münster, Germany",Bornberg-Bauer group
+=======
+position,start,end,institution,where,description
+Postdoc in the Schapiro Lab,Jan2022,ongoing,University Hospital Heidelberg,"Heidelberg, Germany",Defining and modulating cellular neighbourhoods in myocardial infarction models using spatial OMICS technologies
+Postdoc in the Lettre lab,Aug2018,Aug2021,Montreal Heart Institute,"Montreal, Canada","Projects focused on high-throughput CRISPR screens, polygenic risk scores, genetics of heart valve disease and development of single-cell screens to investigate human cellular traits."
+Professionnel recherche niv. II ,Jan 2019,ongoing,Universite de Sherbrooke,"Sherbrooke, Canada","Part of the GenAP initiative (www.genap.ca) as single-cell expert, to include single-cell tools into the GenAP2 platform. Development of Galaxy tools, Rshiny applications and docker containers for single-cell analysis."
+Student Research assistant,Sep2011,Jul2012,"IEB, University of Münster","Münster, Germany",Acquisti group: Analysis of genomes and metagenomes in the context of nutrient limitation and fertilization.
+Student assistant,Mar2011,May 2011,"IEB, University of Münster","Münster, Germany",Bornberg-Bauer group
+>>>>>>> e7e9a26011fecf3615ca3da043ac77a0ba621632
