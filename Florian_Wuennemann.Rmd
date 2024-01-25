@@ -92,7 +92,7 @@ tribble(~time, ~award, ~place,
 \faIcon{computer} Hackathon participation
 ============================
 
-```{r, funding}
+```{r, hackathons}
 readr::read_csv(here("./data/hackathons.csv")) %>% 
    detailed_entries(with = title,
                     what = project,
