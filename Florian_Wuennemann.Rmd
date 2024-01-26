@@ -2,17 +2,17 @@
 headcolor: 00785c
 name: Florian
 surname: W&uuml;nnemann
-position: "Postdoc in the group of Denis Schapiro"
+position: "Postdoctoral researcher"
 address: "Im Neuenheimer Feld 130, 69120 Heidelberg, Germany"
-# phone: +1 514 516 6667
+phone: +49 15773482357
 www: florianwuennemann.com
-email: "flowuenne@gmail.com"
+email: "florian.wuennemann@gmail.com"
 twitter: flowuenne
 github: flowuenne
-#linkedin: florian-w&uuml;nnemann-322357189
-date: "`r format(Sys.time(), '%B %Y')`"
-aboutme: "**Research and scientific interests**:    Spatial OMICS, Cardiovascular disease, Human genetics, Bioinformatics, Machine Learning, Computer vision"
-docname: RÉSUMÉ
+linkedin: florian-w&uuml;nnemann-322357189
+# date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: "Bioinformatics researcher with 5 years of postdoctoral experience in biomedical research at the intersection of data production, processing and analysis for omics technologies."
+docname: Curriculum Vitae
 output: 
   vitae::awesomecv:
     keep_tex: false
@@ -21,7 +21,7 @@ always_allow_html: yes
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-options(tinytex.verbose = TRUE)
+options(tinytex.verbose = FALSE)
 library(vitae)
 library(tibble)
 library(glue)
@@ -29,16 +29,17 @@ library(fontawesome)
 library(here)
 ```
 
-\faIcon{flask} Research experience
+\faIcon{chart-bar} Research experience
 ============================
 
 ```{r, research_experience}
 readr::read_csv(here("./data/experience.csv")) %>% 
+  as_tibble() %>%
   detailed_entries(what = position, 
                    when = glue::glue("{start} - {end}"),
                    with = institution,
                    where = where,
-                   description)
+                   why = description)
 ```
 
 
@@ -48,7 +49,7 @@ readr::read_csv(here("./data/experience.csv")) %>%
 ```{r, education}
 library(tibble)
 readr::read_csv(here("./data/education.csv")) %>%
-  detailed_entries(what = degree,
+  vitae::detailed_entries(what = degree,
                    when = glue("{start} - {end}"),
                    with = institution,
                    where = where,
@@ -58,11 +59,23 @@ readr::read_csv(here("./data/education.csv")) %>%
 \faIcon{laptop-code} Computational skills
 ============================
 
-- **General**: GWAS analysis, Exome/Genome variant calling, Plink, bedtools, Image analysis (Fiji, Napari, QuPath)
-- **R**: Rshiny application development, Rmarkdown, Package development, OMICS data analysis (RNA-seq, single-cell OMICS), reticulate
-- **Python**: Jupyter Hub, basic computer vision applications, single-cell & spatial OMICS analysis, bioconda, biocontainers
-- **Containers**: Docker container creation, Singularity usage, Nextflow workflow creation and execution
-- **Galaxy project**: Creation of galaxy tools and wrappers, setup of https://spatialomics.usegalaxy.eu/
+- **General**: GWAS analysis, Exome/Genome variant calling, Plink, image analysis (Fiji, Napari, QuPath), basic bash scripting, creation of Galaxy tools and wrappers, setup of https://spatialomics.usegalaxy.eu/
+- **Containerization & High-Performance Computing (HPC)**: Docker, Singularity, Nextflow pipeline creation and execution, SLURM, PBS, Virtual machine (VM) management
+- **R**: Rshiny application development, Rmarkdown, OMICS data analysis (RNA-seq, single-cell OMICS, spatial OMICS)
+- **Python**: Basic computer vision applications, single-cell & spatial OMICS analysis, bioconda, biocontainers
+
+\newpage
+
+\faIcon{laptop} Hackathons
+============================
+
+```{r, hackathons}
+readr::read_csv(here("./data/hackathons.csv")) %>% 
+   detailed_entries(with = title,
+                    what = project,
+                    when = glue::glue("{start} - {end}"),
+                    where = location)
+```
 
 \faIcon{dollar-sign} Funding History
 ============================
@@ -73,9 +86,8 @@ readr::read_csv(here("./data/scholarships.csv")) %>%
                  when = glue::glue("{start} - {end}"))
 ```
 
-\newpage
 
-\faIcon{award} Achievements and Awards
+\faIcon{award} Honors and Awards
 ============================
 
 ```{r, awards}
@@ -89,17 +101,12 @@ tribble(~time, ~award, ~place,
                  with = place)
 ```
 
-\faIcon{computer} Hackathon participation
+\faIcon{scroll} Publications
 ============================
 
-```{r, hackathons}
-readr::read_csv(here("./data/hackathons.csv")) %>% 
-   detailed_entries(with = title,
-                    what = project,
-                    when = glue::glue("{start} - {end}"),
-                    where = location)
-```
+For a full list of all my scientific publications, please see my Google scholar profile:
 
+[https://scholar.google.de/citations?user=WsGy_hkAAAAJ&hl=de](https://scholar.google.de/citations?user=WsGy_hkAAAAJ&hl=de)
 
 \faIcon{paper-plane} Invited Presentations
 ============================
@@ -136,31 +143,28 @@ readr::read_csv(here("./data/presentations.csv")) %>%
                    what = title, where = location)
 ```
 
-\faIcon{scroll} Preprints
-============================
+<!-- \faIcon{scroll} Preprints -->
+<!-- ============================ -->
 
-```{r}
-library(dplyr)
+<!-- ```{r} -->
+<!-- library(dplyr) -->
 
-bibliography_entries(here("./data/preprint_references.bib")) %>%
-  arrange(desc(issued))
-```
+<!-- bibliography_entries(here("./data/preprint_references.bib")) %>% -->
+<!--   arrange(desc(issued)) -->
+<!-- ``` -->
 
-\faIcon{scroll} Publications
-============================
+<!-- \faIcon{scroll} Publications -->
+<!-- ============================ -->
 
-```{r}
-library(dplyr)
+<!-- ```{r} -->
+<!-- library(dplyr) -->
 
-bibliography_entries(here("./data/references.bib")) %>%
-  arrange(desc(issued))
-```
-
+<!-- bibliography_entries(here("./test.bib")) %>% -->
+<!--   arrange(desc(issued)) -->
+<!-- ``` -->
 
 \faIcon{language} Languages
 ============================
-
 - German (mother-language)
 - English (fluent)
 - French (fluent)
-- Spanish (Beginner)
